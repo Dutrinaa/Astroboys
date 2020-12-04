@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400&display=swap" rel="stylesheet" />
+  <title>Astroboys</title>
+  <link rel="shortcut icon" href="img/logo_astronauta.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <!-- CÓDIGO PARA ATUALIZAR AUTOMÁTICO PARA FICAR MELHOR A 
+      PROGRAMAÇÃO EM WEBSERVER -->
+  <meta http-equiv="refresh" content="" />
+
+
+</head>
+
+<body id="inicial">
+<header class="desaparecido">
+  <section>
+    <img src="img/logo_astronauta.png" />
+    <h1>As Astroboys</h1>
+  </section>
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html">Inicial</a></li>
+      <li><a href="Galaxias.html">Galáxias</a></li>
+      <li><a href="Nebulosas.html">Nebulosas</a></li>
+      <li><a href="Buracos Negros.html">Buracos Negros</a></li>
+      <li><a href="Estrelas.html">Estrelas</a></li>
+      <li><a href="Planetas.html">Planetas</a></li>
+    </ul>
+  </nav>
+</header>
+  <main id="principal" class="desaparecido">
+    <section id='texto'>
+      <h2>Olá! Seja bem vindo ao multiverso!</h2>
+      <p>
+        Você já parou para pensar sobre tudo que conhecemos como universo?
+        Atualmente, conhecemos apenas 4% dele, e o definimos da seguinte
+        forma:<br />
+        <strong>"O Universo é tudo o que existe fisicamente, a soma do espaço e do
+          tempo e as mais variadas formas de matéria."</strong><br /><br />
+
+        Aqui, você terá um tour virtual sobre algumas
+        <strong>belezas do espaço.</strong>
+        Você irá aprender um pouco sobre as galáxias, nebulosas, buracos negros,
+        estrelas e até mesmo sobre alguns planetas do nosso sistema solar.
+        Garanto que você não vai se arrepender de passar um tempinho no nosso
+        site observando as belezas do nosso vasto espaço.
+      </p>
+    </section>
+    <section id="creditos">
+      <h2>Créditos</h2>
+      <ul>
+        <li>-Danilo Henrique de Souza Riguette</li>
+        <li>-Felipe Dutra Cerbino</li>
+        <li>-Kaique Bolonezi</li>
+      </ul>
+      <p><i><strong>"Nós somos, em cada um de nós,<br> um pequeno universo."</strong> - Carl Sagan</i></p>
+    </section>
+  </main>
+
+  <aside class="backdrop">
+    <video src="videos/vinheta.mp4" autoplay muted>
+    </video>
+  </aside>
+  <button id="unmute">🔉</button>
+
+  <script>
+    // faz o vídeo desaparecer de leve assim que terminar
+    let tempo = 19000;  // 11s, duração do vídeo
+    setTimeout(() => {
+      // faz o vídeo desaparecer colocando a classe .desaparecido
+      document.querySelector('.backdrop').classList.add('desaparecido');
+      // faz o conteúdo principal surgir, retirando a classe .desaparecido
+      document.querySelector('main').classList.remove('desaparecido');
+      document.querySelector('header').classList.remove('desaparecido');
+    }, tempo);
+
+
+    // no clique do botão #unmute, tira o atributo muted to video
+    document.querySelector('#unmute').addEventListener('click', (e) => {
+      document.querySelector('.backdrop video').muted = false;
+      e.currentTarget.classList.add('desaparecido');
+    });
+  </script>
+</body>
+
+</html>
