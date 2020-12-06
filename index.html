@@ -67,25 +67,8 @@
     </video>
   </aside>
   <button id="unmute">🔉</button>
-
-  <script>
-    // faz o vídeo desaparecer de leve assim que terminar
-    let tempo = 19000;  // 11s, duração do vídeo
-    setTimeout(() => {
-      // faz o vídeo desaparecer colocando a classe .desaparecido
-      document.querySelector('.backdrop').classList.add('desaparecido');
-      // faz o conteúdo principal surgir, retirando a classe .desaparecido
-      document.querySelector('main').classList.remove('desaparecido');
-      document.querySelector('header').classList.remove('desaparecido');
-    }, tempo);
-
-
-    // no clique do botão #unmute, tira o atributo muted to video
-    document.querySelector('#unmute').addEventListener('click', (e) => {
-      document.querySelector('.backdrop video').muted = false;
-      e.currentTarget.classList.add('desaparecido');
-    });
-  </script>
+  <button id="skip">skip</button>
+  <script src="script.js"></script>
+  
 </body>
-
 </html>
